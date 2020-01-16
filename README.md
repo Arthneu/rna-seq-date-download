@@ -9,6 +9,7 @@ $ ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/data/grch38.tar.gz  #anotherway $ bo
 $ tar -zxvf hg38.chromFa.tar.gz
 $ cat *.fa > hg38.fa
 $ rm -rf chr*
+$$ hisat2 -p 10 -x reference/hg38/genome -1 SRR1542484_1.fastq -2 SRR1542484_2.fastq -S SRR1542484.sam 2>> mapping_repo.txt
 step4:  download annotation file
 $ wget -c ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.gff.gz 
 $ gunzip GCF_000001405.39_GRCh38.p13_genomic.gff.gz
